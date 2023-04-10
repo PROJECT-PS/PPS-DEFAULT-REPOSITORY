@@ -1,25 +1,17 @@
 {
-    "problem_title": "a + b + c",
+    "problem_title": "a + b",
     "problem_type": "stdio",
     "checker": "tcmp.cc",
     "checker_language": "cpp11",
-    "validator": "validator.py",
-    "validator_language": "py3",
+    "validator": "validator.cc",
+    "validator_language": "cpp11",
     "limits": {
         "time": 1000,
-        "memory": 128000000,
+        "memory": 134217728,
         "factor": {
-            "cpp": {
-                "time": 0,
-                "memory": 0
-            },
-            "cpp11": {
-                "time": 1000,
-                "memory": 0
-            },
             "py3": {
-                "time": 5000,
-                "memory": 256000000
+                "time": 0,
+                "memory": 268435456
             }
         }
     },
@@ -38,7 +30,12 @@
         {
             "name": "solution.cc",
             "language": "cpp11",
-            "type": "AC"
+            "type": "MCS"
+        },
+        {
+            "name": "solution_wa.cc",
+            "language": "cpp11",
+            "type": "WA"
         },
         {
             "name": "solution.py",
@@ -49,87 +46,82 @@
             "name": "solution_heuristic.cc",
             "language": "cpp11",
             "type": "AC/WA"
-        },
-        {
-            "name": "solution_mcs.cc",
-            "language": "cpp11",
-            "type": "MCS"
-        },
-        {
-            "name": "solution_mle.cc",
-            "language": "cpp11",
-            "type": "TLE/MLE/FAIL"
-        },
-        {
-            "name": "solution_runtime_error.cc",
-            "language": "cpp11",
-            "type": "AC/WA/TLE/MLE/FAIL"
-        },
-        {
-            "name": "solution_tle.cc",
-            "language": "cpp11",
-            "type": "TLE/MLE/FAIL"
-        },
-        {
-            "name": "solution_wa.cc",
-            "language": "cpp11",
-            "type": "WA"
         }
     ],
     "generators": [
         {
-            "name": "generator.py",
-            "language": "py3",
-            "alias": "random"
-        },
-        {
             "name": "generator_manual.py",
             "language": "py3",
             "alias": "manual"
+        },
+        {
+            "name": "generator_without_testlib.py",
+            "language": "py3",
+            "alias": "random_py"
+        },
+        {
+            "name": "generator.cc",
+            "language": "cpp11",
+            "alias": "random_cc"
         }
     ],
     "genscript": [
         {
             "script": "manual 1",
-            "description": "예제 1번입니다. invocate할떄는 생성하지 않습니다.",
+            "description": "예제로 사용될 데이터 1번입니다.",
             "is_example": true,
-            "only_deploy": true
+            "only_deploy": false
         },
         {
             "script": "manual 2",
-            "description": "예제 2번입니다. invocate할떄는 생성하지 않습니다.",
+            "description": "예제로 사용될 데이터 2번입니다.",
             "is_example": true,
-            "only_deploy": true
-        },
-        {
-            "script": "random 1 10",
-            "is_example": false,
             "only_deploy": false
         },
         {
-            "script": "random 1 10 random_seed",
-            "is_example": false,
-            "only_deploy": false
-        },
-        {
-            "script": "random 1 10 random_seed _____",
-            "description": "",
-            "only_deploy": false
-        },
-        {
-            "script": "random 1 10 random_seed ____",
+            "script": "random_py 1 9 1 9",
             "description": "",
             "is_example": false,
             "only_deploy": false
         },
         {
-            "script": "random 1 10 random_seed ____",
+            "script": "random_py 1 9 1 9",
             "description": "",
             "is_example": false,
             "only_deploy": false
         },
         {
-            "script": "random 1 10 2345678901234567890123456789012345678901234567890123456789012345678901234567890123456789",
+            "script": "random_py 1 9 1 9 _",
+            "description": "",
+            "is_example": false,
+            "only_deploy": false
+        },
+        {
+            "script": "random_py 1 9 1 9 __",
+            "description": "",
+            "is_example": false,
+            "only_deploy": false
+        },
+        {
+            "script": "random_cc 1 9 1 9",
+            "description": "",
+            "is_example": false,
+            "only_deploy": false
+        },
+        {
+            "script": "random_cc 1 9 1 9",
+            "description": "",
+            "is_example": false,
+            "only_deploy": false
+        },
+        {
+            "script": "random_cc 1 9 1 9 _",
+            "description": "",
+            "is_example": false,
+            "only_deploy": false
+        },
+        {
+            "script": "random_cc 1 9 1 9 __",
             "description": "",
             "is_example": false,
             "only_deploy": false
@@ -138,6 +130,5 @@
     "versions": {
         "config": 1,
         "repository": 1
-    },
-    "loading": false
+    }
 }

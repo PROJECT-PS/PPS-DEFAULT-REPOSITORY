@@ -1,15 +1,16 @@
 # Problem
 
-given three integer a, b, c.
+You are given two integers a and b.
 
-print a + b + c.
+Print a + b.
 
 # Input
 
-a, b, c is integer.
+The first line of input contains two integers a and b separated by a space.
 
-0 ≤ a, b, c ≤ 10
+* 1 ≤ a ≤ 9
+* 1 ≤ b ≤ 9
 
 # Output
 
-print a + b + c in first line.
+Print a + b on the first line of output.
