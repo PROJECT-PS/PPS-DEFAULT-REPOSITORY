@@ -8,11 +8,11 @@
     "subtask": false,
     "limits": {
         "time": 1000,
-        "memory": 134217728,
+        "memory": 536870912,
         "factor": {
             "py3": {
                 "time": 0,
-                "memory": 268435456
+                "memory": 1073741824
             }
         }
     },
@@ -83,7 +83,7 @@
             "only_deploy": false
         },
         {
-            "script": "random_py 1 9 1 9",
+            "script": "random_py 9 9 9 9",
             "subtask_group": "",
             "description": "",
             "is_example": false,
@@ -119,6 +119,13 @@
         },
         {
             "script": "random_cc 1 9 1 9",
+            "subtask_group": "",
+            "description": "",
+            "is_example": false,
+            "only_deploy": false
+        },
+        {
+            "script": "random_cc 1 1 1 1",
             "subtask_group": "",
             "description": "",
             "is_example": false,
